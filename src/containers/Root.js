@@ -1,9 +1,12 @@
 import React        from 'react';
 import { Provider } from 'react-redux';
 import { Router }   from 'react-router';
-import routes       from '../routes';
+import { Route }   from 'react-router';
 import { createDevToolsWindow } from '../utils';
 import { DevTools, LogMonitor, DebugPanel } from 'redux-devtools/lib/react';
+
+import CoreLayout  from 'layouts/CoreLayout';
+import HomeView    from 'views/HomeView';
 
 export default class Root extends React.Component {
   static propTypes = {
@@ -39,9 +42,13 @@ export default class Root extends React.Component {
       <div>
         {this.renderDevTools()}
         <Provider store={this.props.store}>
+
           <Router history={this.props.history}>
-            {routes}
+            <Route component={CoreLayout}>
+              <Route name='home' path='/' component={HomeView} />
+            </Route>
           </Router>
+
         </Provider>
       </div>
     );

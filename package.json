@@ -1,13 +1,13 @@
 {
-  "name": "react-redux-starter-kit",
+  "name": "react-redux-starter-kit__kylpo",
   "version": "0.15.2",
-  "description": "Get started with React, Redux, and React-Router!",
+  "description": "Kylpo's fork of react-redux-starter-kit",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
     "compile": "webpack",
     "start": "npm run dev",
-    "dev": "node --harmony bin/webpack-dev-server",
+    "dev": "node bin/webpack-dev-server",
     "dev:nw": "npm run dev -- --nw",
     "dev:no-debug": "npm run dev -- --no_debug",
     "test": "node ./node_modules/karma/bin/karma start",
@@ -16,9 +16,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/kylpo/react-redux-starter-kit.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
   "license": "MIT",
   "dependencies": {
     "babel": "^5.8.23",

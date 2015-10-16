@@ -87,7 +87,6 @@ config.set('utils_aliases', [
   'containers',
   'layouts',
   'reducers',
-  'routes',
   'services',
   'styles',
   'utils',

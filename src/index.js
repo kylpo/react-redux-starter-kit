@@ -4,8 +4,7 @@ import Root                 from './containers/Root';
 import configureStore       from './stores';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 
-const target = document.getElementById('root');
-const store  = configureStore(window.__INITIAL_STATE__, __DEBUG__);
+const store = configureStore(window.__INITIAL_STATE__, __DEBUG__);
 
 const node = (
   <Root store={store}
@@ -14,4 +13,4 @@ const node = (
         debugExternal={__DEBUG_NW__} />
 );
 
-ReactDOM.render(node, target);
+ReactDOM.render(node, document.getElementById('root'));
