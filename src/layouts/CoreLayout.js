@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/core.scss';
+import 'styles/vendor/normalize.css';
 
 export default class CoreLayout extends React.Component {
   static propTypes = {

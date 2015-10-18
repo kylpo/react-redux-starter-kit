@@ -65,12 +65,12 @@ const webpackConfig = {
         }
       },
       {
-        test    : /\.scss$/,
+        // see https://github.com/christianalfoni/react-webpack-cookbook/wiki/Loading-CSS for help
+        test    : /\.css$/, // Only .css files
         loaders : [
-          'style-loader',
-          'css-loader',
+          'style-loader', // insert the raw css into a style tag on your page
+          'css-loader', // go through css and find url() expressions and resolve them
           'autoprefixer?browsers=last 2 version',
-          'sass-loader?includePaths[]=' + paths.src('styles')
         ]
       },
       { test: /\.woff(\?.*)?$/,     loader: "url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff" },
